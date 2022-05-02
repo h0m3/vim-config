@@ -1,0 +1,16 @@
+:Gvimrc	vim_config.txt	/*:Gvimrc*
+:Vimrc	vim_config.txt	/*:Vimrc*
+VimConfig	vim_config.txt	/*VimConfig*
+VimConfigAbout	vim_config.txt	/*VimConfigAbout*
+VimConfigAutoreload	vim_config.txt	/*VimConfigAutoreload*
+VimConfigCommands	vim_config.txt	/*VimConfigCommands*
+VimConfigCustomization	vim_config.txt	/*VimConfigCustomization*
+VimConfigLicense	vim_config.txt	/*VimConfigLicense*
+VimConfigMappings	vim_config.txt	/*VimConfigMappings*
+VimConfigUsage	vim_config.txt	/*VimConfigUsage*
+vim_config.txt	vim_config.txt	/*vim_config.txt*
+vim_config_autoreload	vim_config.txt	/*vim_config_autoreload*
+vim_config_gvimrc	vim_config.txt	/*vim_config_gvimrc*
+vim_config_load	vim_config.txt	/*vim_config_load*
+vim_config_split	vim_config.txt	/*vim_config_split*
+vim_config_vsplit	vim_config.txt	/*vim_config_vsplit*

@@ -111,7 +111,7 @@ them trought vim default mappings.
 =========================================================================
 About                                                      *VimConfigAbout*
 
-This is my first vim plugin so please take it easy :P 
+This is my first vim plugin so please take it easy :P
 
 My objective is just to avoid putting all vimrc related stuff in
 my own vimrc, so you get this plugin hahaha.
@@ -123,7 +123,7 @@ Or maybe you want to send a direct message? Try dr.hoome at gmail.com
 
 Thaks to:
     * NERDTree for inspiration on this help file
-        http://github.com/preservim/nerdtree  
+        http://github.com/preservim/nerdtree
 
     * LearnVimScriptTheHardWay for more inspiration on this help file
        https://learnvimscriptthehardway.stevelosh.com
