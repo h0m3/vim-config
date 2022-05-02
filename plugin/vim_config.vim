@@ -5,34 +5,23 @@
 "
 
 "   Prevents the plugin from being loaded multiple times
-if exists("g:loaded_vim_config")
+if exists("g:loaded_vim_config") || get(g:, "vim_config_load", 1) == 0
     finish
 endif
 let g:loaded_vim_config = 1
 
-" Load all default values
-let g:vim_config_loaded = get(g:, "vim_config_loaded", 1)
-let g:vim_config_split = get(g:, "vim_config_split", 0)
-let g:vim_config_vsplit = get(g:, "vim_config_vsplit", 0)
-let g:vim_config_autoreload = get(g:, "vim_config_autoreload", 1)
-let g:vim_config_gvimrc = get(g:, "vim_config_gvimrc", 1)
+" Expose commands
+command! -nargs=0 Vimrc call vim_config#Vimrc()
 
-" Only execute if vim_config is loaded
-if g:vim_config_loaded == 1
-    " Expose commands
-    command! -nargs=0 Vimrc call vim_config#Vimrc()
+if get(g:, "vim_config_gvimrc", 1) == 1
+    command! -nargs=0 Gvimrc call vim_config#Gvimrc()
+endif
 
-    if g:vim_config_gvimrc == 1
-        command! -nargs=0 Gvimrc call vim_config#Gvimrc()
-    endif
-
-    " Autoreload vimrc
-    if g:vim_config_autoreload == 1
-        augroup VIM_CONFIG_VIMRC
-            autocmd!
-            autocmd bufwritepost $MYVIMRC call vim_config#Reload_vimrc()
-            autocmd bufwritepost $MYGVIMRC call vim_config#Reload_gvimrc()
-        augroup end
-    endif
-
+" Autoreload vimrc
+if get(g:, "vim_config_autoreload", 1) == 1
+    augroup VIM_CONFIG_VIMRC
+        autocmd!
+        autocmd bufwritepost $MYVIMRC call vim_config#Reload_vimrc()
+        autocmd bufwritepost $MYGVIMRC call vim_config#Reload_gvimrc()
+    augroup end
 endif
