@@ -30,18 +30,8 @@ if g:vim_config_loaded == 1
     if g:vim_config_autoreload == 1
         augroup VIM_CONFIG_VIMRC
             autocmd!
-
-            autocmd bufwritepost $MYVIMRC
-                \source %
-                \| redraw
-                \| echom $MYVIMRC . " reloaded!"
-
-            autocmd bufwritepost $MYGVIMRC
-                \if has('gui_running')
-                \| source %
-                \| echom $MYGVIMRC . "reloaded!"
-                \| redraw
-                \| endif
+            autocmd bufwritepost $MYVIMRC call vim_config#Reload_vimrc()
+            autocmd bufwritepost $MYGVIMRC call vim_config#Reload_gvimrc()
         augroup end
     endif
 
