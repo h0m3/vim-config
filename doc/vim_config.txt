@@ -23,7 +23,7 @@ CONTENTS                                                         *VimConfig*
 =========================================================================
 Usage                                                      *VimConfigUsage*
 
-This plugin provides some commands to allow you to fast and ealily
+This plugin provides some commands to allow you to fast and easily
 switch to your vim configuration file.
 
 =========================================================================
@@ -43,8 +43,8 @@ Autoreload                                            *VimConfigAutoreload*
 This script comes with a `autocmd` that reloads vimrc every time you
 save it.
 
-If you or your vim is allergic to `autocmds` or you want to disable it
-for some reason check out |vim_config_autoreload|.
+If you or your vim is allergic to autocommands or you want to disable
+it for some reason check out |vim_config_autoreload|.
 
 Yes. Im evil, this plugin will add a autocmd to your vim by default.
 
