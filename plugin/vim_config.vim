@@ -5,7 +5,7 @@
 "
 
 "   Prevents the plugin from being loaded multiple times
-if exists('g:loaded_vim_config') || get(g:, 'vim_config_load', 1) == 0
+if get(g:, 'vim_config_load', 1) == 0
     finish
 endif
 let g:loaded_vim_config = 1
