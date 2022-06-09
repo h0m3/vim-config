@@ -51,7 +51,7 @@ endfunction
 
 " Reload vim configuration file
 function! vim_config#Reload_vimrc()
-    if !exist('$MYVIMRC')
+    if !exists('$MYVIMRC')
         echoerr '$MYVIMRC is not defined'
         return
     endif
