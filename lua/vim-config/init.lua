@@ -1,5 +1,10 @@
 local Module = {}
 
+-- Print to stderr
+function printerr(...)
+    io.stderr:write(...)
+end
+
 -- Fix for 'cmd' on neovim and 'command' on vim
 -- Run a command
 function Command(cmd)
@@ -38,7 +43,7 @@ end
 function Module.load_vimrc()
     vimrc_file = os.getenv("MYVIMRC")
     if vimrc_file == nil then
-        print("$MYVIMRC is not defined")
+        printerr("$MYVIMRC is not defined")
         return
     end
 
@@ -49,7 +54,7 @@ end
 function Module.load_gvimrc()
     gvimrc_file = os.getenv("MYGVIMRC")
     if gvimrc_file == nil then
-        print("$MYGVIMRC is not defined")
+        printerr("$MYGVIMRC is not defined")
         return
     end
 
@@ -60,7 +65,7 @@ end
 function Module.reload_vimrc()
     vimrc_file = os.getenv("MYVIMRC")
     if vimrc_file == nil then
-        print("$MYVIMRC is not defined")
+        printerr("$MYVIMRC is not defined")
         return
     end
     
@@ -71,7 +76,7 @@ end
 function Module.reload_gvimrc()
     gvimrc_file = os.getenv("MYGVIMRC")
     if gvimrc_file == nil then
-        print("$MYGVIMRC is not defined")
+        printerr("$MYGVIMRC is not defined")
         return
     end
 
