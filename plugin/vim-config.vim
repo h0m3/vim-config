@@ -12,7 +12,7 @@ let g:loaded_vim_config = 1
 
 " Check if its nvim ou has lua
 if !(has('nvim') || has('lua'))
-    echoerr('Your vim doesnt have support for Lua')
+    echoerr('vim-config: Your vim doesnt have support for Lua')
     finish
 endif
 
@@ -22,7 +22,7 @@ if get(g:, 'vim_config_load', 1) == 0
 endif
 
 " Define a package path for lua
-let s:lua_rocks_deps_loc =  expand('<sfile>:h:r') . '/../lua/example-plugin/deps'
+let s:lua_rocks_deps_loc =  expand('<sfile>:h:r') . '/../lua/vim-config/deps'
 exe "lua package.path = package.path .. ';" . s:lua_rocks_deps_loc . "/lua-?/init.lua'"
 
 " Expose commands
