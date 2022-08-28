@@ -48,3 +48,8 @@ you can disable it by setting
 ```vim
     let g:vim_config_autoreload=0
 ```
+
+# License
+
+VimConfig is hapily shared under BSD Three Clause License.
+See https://opensource.org/licenses/BSD-3-Clause.
