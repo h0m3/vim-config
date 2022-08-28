@@ -1,4 +1,4 @@
-*vim_config.txt* easily edit your vimrc config file
+*vim-config.txt* easily edit your vimrc config file
 
     __     ___              ____             __ _       ~
     \ \   / (_)_ __ ___    / ___|___  _ __  / _(_) __ _ ~
@@ -117,7 +117,7 @@ My objective is just to avoid putting all vimrc related stuff in
 my own vimrc, so you get this plugin hahaha.
 
 You can reach me on my git at https://github.com/h0m3 where this
-plugin is also available: https://github.com/h0m3/vim_config
+plugin is also available: https://github.com/h0m3/vim-config
 
 Or maybe you want to send a direct message? Try dr.hoome at gmail.com
 
@@ -126,10 +126,16 @@ Thaks to:
         http://github.com/preservim/nerdtree
 
     * LearnVimScriptTheHardWay for more inspiration on this help file
-       https://learnvimscriptthehardway.stevelosh.com
+        https://learnvimscriptthehardway.stevelosh.com
+
+    * Writing a vim plugin at linode
+        https://www.linode.com/docs/guides/writing-a-neovim-plugin-with-lua
+
+    * Writing a lua vim plugin at linode for porting it to lua
+        https://www.linode.com/docs/guides/writing-a-neovim-plugin-with-lua
 
     * The thousands of pages of StackOverflow that i needed to make
-        vimscript works the way i want
+        vimscript and lua works the way i want
 
 =========================================================================
 License                                                  *VimConfigLicense*
