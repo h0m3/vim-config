@@ -4,6 +4,13 @@ A simple plugin that allows a easy way to open your Vimrc
 
 ![vim-config screenshot](screenshot.png)
 
+# Requirements
+
+You need Vim 8+ with lua support or neovim
+
+To check if your vim has lua support try `:echo has('lua')` on your vim,
+neovim has builtin lua support and its fully supported on any version.
+
 # Installation
 
 You can use vim 8 or nvim built-in package manager, check out :help packages.
