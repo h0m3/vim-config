@@ -1,26 +1,36 @@
 local Module = {}
 
+-- Fix for 'cmd' on neovim and 'command' on vim
+-- Run a command
+function Command(cmd)
+    if vim.fn.has('nvim') ~= 0 then
+        vim.cmd(cmd)
+    else
+        vim.command(cmd)
+    end
+end
+
 -- Open a generic file using vim
 function open_file(filepath)
     -- Horizontal split
     if vim.g.vim_config_split == 1 then
-        vim.cmd(string.format('split %s', filepath))
+        Command(string.format('split %s', filepath))
         return
     end
 
     -- Vertical split
     if vim.g.vim_config_vsplit == 1 then
-        vim.cmd(string.format('vsplit %s', filepath))
+        Command(string.format('vsplit %s', filepath))
         return
     end
 
-    vim.cmd(string.format('edit %s', filepath))
+    Command(string.format('edit %s', filepath))
 end
 
 -- Reload a file using vim
 function reload_file(filepath)
-    vim.cmd(string.format('source %s', filepath))
-    vim.cmd('redraw')
+    Command(string.format('source %s', filepath))
+    Command('redraw')
     print(string.format("'%s' reloaded!", filepath))
 end
 
@@ -65,7 +75,7 @@ function Module.reload_gvimrc()
         return
     end
 
-    if vim.fn.has('gui_running') then
+    if vim.fn.has('gui_running') ~= 0 then
         reload_file(gvimrc_file)
     end
 end
